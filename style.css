@@ -1143,3 +1143,33 @@ section {
     text-align: center;
   }
 }
+ /* === Day 3: Footer Polish & Accessibility === */
+
+/* Improve spacing and readability in footer bottom */
+.footer-bottom {
+  padding: 18px 12px;         /* Better breathing room */
+  text-align: center;         /* Ensure centered on all screens */
+}
+
+/* Make footer lines easier to read */
+.footer-bottom p {
+  font-size: 0.95rem;         /* Slightly larger text */
+  line-height: 1.6;           /* Better readability */
+  margin: 6px 0;              /* Even vertical spacing */
+  color: #e6e6e6;             /* Higher contrast on dark backgrounds */
+}
+
+/* Emphasize the version/deploy line a bit */
+.footer-bottom p:nth-child(2) {
+  font-weight: 600;
+  color: #ffffff;             /* Strong contrast */
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .footer-bottom p {
+    font-size: 0.9rem;        /* Keep readable but compact */
+    padding: 0 6px;           /* Prevent edge clipping */
+  }
+}
+
