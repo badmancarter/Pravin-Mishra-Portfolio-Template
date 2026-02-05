@@ -59,14 +59,18 @@
     <img src="images/image.png" alt="Hero Banner" class="hero-bg" loading="lazy">
 
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
       <h1>
-        “Empowering thousands of students<br>
-        towards success.”
+        <a href="https://discord.pravinmishra.com/" target="_blank" rel="noopener noreferrer"
+          style="color: #ffffff; text-decoration: none;">
+          Join DMI Cohort 3 on Discord and start your DevOps journey
+        </a>
       </h1>
     </div>
 
-  </section>
+</section>
+
   <section id="about" class="about-section">
     <div class="about-container">
 
@@ -601,6 +605,7 @@
       <!-- Bottom -->
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Aderoju Olabode Joseph</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
       </div>
 
@@ -608,6 +613,17 @@
   </footer>
 
 
+<script>
+  (function () {
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const d = new Date();
+    const dd = String(d.getDate()).padStart(2, "0");
+    const mon = months[d.getMonth()];
+    const yyyy = d.getFullYear();
+    const el = document.getElementById("deployDate");
+    if (el) el.textContent = `${dd} ${mon} ${yyyy}`;
+  })();
+</script>
 
 </body>
 
