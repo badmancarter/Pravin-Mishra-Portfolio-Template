@@ -40,3 +40,34 @@ Add this line (example):
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+## Footer version + deploy date
+
+Requirement:
+Pravin Mishra Portfolio v1.0 — Deployed on <DD Mon YYYY> — By <Student Name>
+
+How date is generated:
+The deploy date is generated dynamically in the browser using JavaScript and written into:
+<span id="deployDate"></span>
+
+Code snippet:
+
+```html
+<p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Aderoju Olabode Joseph</p>
+
+const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const d = new Date();
+document.getElementById("deployDate").textContent =
+  String(d.getDate()).padStart(2,"0") + " " + months[d.getMonth()] + " " + d.getFullYear();
+
+---
+
+### Quick reminder (so nothing gets mixed up)
+
+- **Working footer + `<span id="deployDate">` + `<script>`** → `index.html`
+- **Explanation + snippets (what you pasted above)** → `README.md`
+
+### After updating README
+```bash
+git add README.md
+git commit -m "docs(readme): document dynamic deploy date in footer"
